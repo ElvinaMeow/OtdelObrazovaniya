@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #fff; /* White background */
+    padding: 20px 0;
+    border-bottom: 1px solid #eee; /* Subtle border */
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.2; /* Adjust line height for the logo */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500; /* Adjust font weight if needed */
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007bff; /* Hover color */
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 1.3em;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #000; /* Darker hover color */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .faq-list {
+    margin-top: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Hide the answer initially */
+  }
+  
+  .faq-question {
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    padding-right: 30px; /* Add space for the arrow */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .faq-question:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .faq-question::after {
+    content: "\f078"; /* Font Awesome down arrow */
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-answer {
+    padding: 0 15px; /* Initial padding is 0 to hide content */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Smooth transition */
+    background-color: #f9f9f9;
+  }
+  
+  .faq-answer p {
+    padding: 15px 0;
+    margin: 0;
+  }
+  
+  /* Checkbox Hack to Toggle Visibility */
+  input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+  }
+  
+  input[type="checkbox"]:checked + .faq-question::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+  }
+  
+  input[type="checkbox"]:checked + .faq-question + .faq-answer {
+    max-height: 500px; /* Set a max height to reveal the content */
+    padding: 15px; /* Add padding when visible */
+  }
+
+  .contact-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-section img {
+    max-width: 80%; /* Adjust image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+ /*футер*/
+ footer {
+    background-color: #0E559A; 
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 250px; 
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column p {
+    margin-bottom: 5px;
+}
+
+.footer-column form {
+    display: flex;
+    align-items: center;
+}
+
+.footer-column input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 150px;
+    font-size: 14px;
+}
+
+.footer-column button[type="submit"] {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #0E559A;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*Адаптивность*/
+@media (max-width: 768px) {
+    .course {
+        width: 90%;
+        min-width: auto;
+    }
+}
+
+/* Activities Content */
+.activities-content {
+    padding: 40px 0;
+    text-align: left;
+    position: relative; /* For positioning shapes */
+    overflow: hidden; /* Hide shapes that overflow */
+}
+
+.activities-content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #00429d;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #555;
+    width: 30px; /* to make width of icon equals*/
+    text-align: center; /* all icon horizontal align*/
+}
+
+.activity-item span {
+    font-size: 1.1em;
+}
+
+.background-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Make shapes non-interactive */
+}
+
+.shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    opacity: 0.8;
+    z-index: -1; /* Place shapes behind content */
+}
+
+.pink-shape {
+    background-color: #ffb6c1; /* Light pink */
+    top: 15%;
+    left: 65%;
+}
+
+.green-shape {
+    background-color: #90ee90; /* Light green */
+    top: 25%;
+    left: 85%;
+}
+
+.yellow-shape {
+    background-color: #ffffe0; /* Light yellow */
+    top: 45%;
+    left: 75%;
+}
+.green-shape.top-green {
+    top: 0%;
+    left: 90%;
+    width: 75px;
+    height: 75px;
+}
+.yellow-shape.bottom-yellow {
+    bottom: 10%;
+    left: 60%;
+    width: 75px;
+    height: 75px;
+}
+.pink-shape.bottom-pink {
+    bottom: 0%;
+    left: 80%;
+    width: 75px;
+    height: 75px;
+}
